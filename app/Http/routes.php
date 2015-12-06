@@ -20,3 +20,6 @@ Route::get('dashboard', function () {
 Route::get('reg', function () {
     return view('reg');
 });
+Route::get('test', function () {
+    return view('test');
+});
