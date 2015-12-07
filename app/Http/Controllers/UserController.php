@@ -112,6 +112,8 @@ class UserController extends Controller
         $re->password=$pass2;
         $re->save();
 
+        Session::flash('data',"Signed up Successfully.");
+
         return Redirect::to('re');
     }
 
