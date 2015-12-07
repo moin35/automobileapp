@@ -18,12 +18,5 @@ Route::get('logout','UserController@logout');// LogOut Moin
 
 Route::get('/','UserController@getpublicView');//Public View Moin
 
-
-
-
-Route::get('reg', function () {
-    return view('reg');
-});
-Route::get('test', function () {
-    return view('test');
-});
+Route::get('reg','UserController@getregstation');//saif
+Route::post('reg','UserController@postregstation');//saif
