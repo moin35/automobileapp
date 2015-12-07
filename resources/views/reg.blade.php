@@ -21,7 +21,7 @@ Login
 @stop
 @section('body')
 <div class="row text-center">
-  <div class="col-md-2"></div>
+  <div class="col-md-1"></div>
 <div class="col-md-10" >
 
 
@@ -33,14 +33,29 @@ Login
       <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6">
           <div class="form-group">
-                        <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                        <input type="text" name="company_name" id="first_name" class="form-control input-lg" placeholder="Company Name" tabindex="1">
           </div>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6">
           <div class="form-group">
-            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+            <input type="text" name="company_email" id="last_name" class="form-control input-lg" placeholder="Company Email" tabindex="2">
           </div>
         </div>
+      </div>
+      <div class="form-group">
+        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+      </div>
+      <div class="form-group">
+        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+      </div>
+      <div class="form-group">
+        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+      </div>
+      <div class="form-group">
+        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+      </div>
+      <div class="form-group">
+        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
       </div>
       <div class="form-group">
         <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
@@ -105,6 +120,6 @@ Login
 </div><!-- /.modal -->
 
 </div>
-
+<div class="col-md-1"></div>
 </div>
 @stop
