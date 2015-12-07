@@ -15,9 +15,9 @@ Route::get('/','UserController@getlogin');
 Route::post('/','UserController@postlogin');
 
 Route::get('dashboard','UserController@index');
-Route::get('reg', function () {
-    return view('reg');
-});
+Route::get('reg','UserController@getregstation');//saif
+Route::post('reg','UserController@postregstation');//saif
+
 Route::get('test', function () {
     return view('test');
 });
