@@ -75,12 +75,12 @@
     </div>
 </div>
 
-<div class="container">
-  <div id="navBar" class="navbar navbar-inverse navbar-fixed-bottom">
+
+  <div id="navBar" class="navbar navbar-inverse navbar-bottom">
   <div class="navbar-inner">
      <span class="navbar-text">@All Rights Reserve Brand Name</span>
    
-  </div>
+
 </div>
 </div>
 </body>

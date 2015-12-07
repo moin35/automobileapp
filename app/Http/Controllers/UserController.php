@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
-
+use App\User;
 class UserController extends Controller
 {
+    //Authentication Start moin  
     public function getlogin(){
     if(Auth::check())
             {
@@ -38,21 +39,50 @@ class UserController extends Controller
             }
         else{
           Session::flash('data','Login Failed! Please check your credentials.');
-             return redirect('login');
+             return redirect::to('user/login');
             }
         }
-        public function logout(){
-        Auth::logout();
-        return Redirect::to('login');
-    }
+
   public function index(){
-        if(Auth::check())
+      if(Auth::check()){
+   
+        if (priv()==1)
         {
             return view('dashboard.superadmin');
         }
+        elseif (priv()==2) {
+            return view('dashboard.company');
+        }
         else
         {
-            return 'not logged in!';
+            Session::flash('data','Login Failed! Please check your credentials.');
+            return redirect::to('user/login');
         }
     }
+    else{
+         Session::flash('data','Login Failed! Please check your credentials.');
+            return redirect::to('user/login');
+    }
+
+    }
+        public function logout(){
+        Auth::logout();
+        Session::flash('data','Logout Sucsessfully !');
+        return Redirect::to('user/login');
+    }
+    //Authentication End moin
+//Public View Start
+    public function getpublicView()
+    {
+        return view('welcome');
+    }
+
+
+
+
+
+}
+
+function priv(){
+    return  Auth::user()->privilege;
 }

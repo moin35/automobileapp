@@ -123,431 +123,399 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-/****** User-Profile ******/
-
-.navbar-side li.side-user {
-    border-bottom: 1px solid #142638;
-    border-top: medium none !important;
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
     display: block;
-    padding: 15px;
-    text-align: center;
-    width: 100%;
-}
-
-.navbar-side .side-user img {
-  display: block;
-  margin-bottom: 15px;
-  margin-left: 20px;
-  width: 150px;
-  height: 150px;
-}
-
-.navbar-side .side-user .welcome {
-    color: #9AA4AF;
-    font-style: italic;
-    margin: 0;
-}
-
-.navbar-side .side-user .welcome .fa {
-    padding-right: 0;
-}
-
-.navbar-side .side-user .name {
-    color: #CCD1D7;
-    font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
-    padding: 0px;
-}
-/****** End User-Profile ******/
-
-.admin-content {
-  padding: 20px;
-}
-
-/* Edit Below to Customize Widths > 768px */
-@media (min-width:768px) {
-
-.side-nav {
-  margin-left: -225px;
-  left: 225px;
-  width: 225px;
-  position: fixed;
-  top: 50px;
-  height: 100%;
-  border-radius: 0;
-  border: none;
-  overflow: auto;
-}
-
-.side-nav >li .dropdown > ul .dropdown-menu {
-  min-width: 225px;
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  background-color: transparent;
-  box-shadow: none;
-  -webkit-box-shadow: none;
-}
-
-.side-nav>li>a {
-  width: 225px;
-}
-
-
-
-.navbar-collapse {
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-}
-
-}
-
-/* New */
-
-.navbar-side .side-nav .panel {
- margin: 0px;
- padding: 0px;
-}
-
-.navbar-side ul.side-nav {
-  background-color: #2C3E50;
-  border-bottom: 1px solid #54677A;
-  font-size: 13px;
-  margin-bottom: 0;
-  margin-top: 0;
-  border-left: 1px solid #54677A;
-}
-
-.navbar-side .navbar-nav > li > a:hover {
-  background-color: #34495E !important;
-}
-
-.navbar-side .navbar-nav > li > a:focus {
-  background-color: #34495E !important;
-}
-
-.navbar-side .navbar-nav > li > a:active {
- background-color: #34495E !important;
- color: #000;
- outline: medium none;
- text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1)
-}
-
-.navbar-side .navbar-nav > li > a {
- background-color: #34495E;
- outline: medium none;
- text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-side .navbar-nav .sublink {
-  color: #000 ;
-}
-
-.navbar-side .side-nav li, .navbar-side .side-nav li.panel {
- border-bottom: 1px solid #142638;
- border-top: 1px solid #54677A;
- border-left: 1px solid #54677A;
- border-right: 1px solid #54677A;
-}
-.navbar-side .side-nav li.panel ul li {
- border-bottom: medium none;
- border-top: medium none;
-}
-
-/* Top Menu Color */
-
-.navbar-s1 {
-  background-color: #2C3E50;
-  margin-left: 0;
-  border-bottom: 2px solid #2C3E50;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  z-index: 1030;
-}
-
-.navbar-s1 .navbar-brand {
-  display: inline-block;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.navbar-s1 .navbar-brand:hover,
-.navbar-s1 .navbar-brand:focus {
-  color: #ffffff;
-  background-color: transparent;
-}
-
-.navbar-s1 .navbar-text {
-  color: #999999;
-}
-
-.navbar-s1 .navbar-nav > li > a {
-  color: #999999;
-}
-
-.navbar-s1 .navbar-nav > li > a:hover,
-.navbar-s1 .navbar-nav > li > a:focus {
-  color: #ffffff;
-  background-color: transparent;
-}
-
-.navbar-s1 .navbar-nav > .active > a,
-.navbar-s1 .navbar-nav > .active > a:hover,
-.navbar-s1 .navbar-nav > .active > a:focus {
-  color: #ffffff;
-  background-color: #080808;
-}
-
-.navbar-s1 .navbar-nav > .disabled > a,
-.navbar-s1 .navbar-nav > .disabled > a:hover,
-.navbar-s1 .navbar-nav > .disabled > a:focus {
-  color: #444444;
-  background-color: transparent;
-}
-
-.navbar-s1 .navbar-toggle {
-  border-color: #333333;
-}
-
-.navbar-s1 .navbar-toggle:hover,
-.navbar-s1 .navbar-toggle:focus {
-  background-color: #333333;
-}
-
-.navbar-s1 .navbar-toggle .icon-bar {
-  background-color: #ffffff;
-}
-
-.navbar-s1 .navbar-collapse,
-.navbar-s1 .navbar-form {
-  border-color: #101010;
-}
-
-.navbar-s1 .navbar-nav > .open > a,
-.navbar-s1 .navbar-nav > .open > a:hover,
-.navbar-s1 .navbar-nav > .open > a:focus {
-  color: #ffffff;
-  background-color: #080808;
-}
-
-@media (max-width: 767px) {
-  .navbar-s1 .navbar-nav .open .dropdown-menu > .dropdown-header {
-    border-color: #080808;
   }
-  .navbar-s1 .navbar-nav .open .dropdown-menu .divider {
-    background-color: #080808;
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
   }
-  .navbar-s1 .navbar-nav .open .dropdown-menu > li > a {
-    color: #999999;
-  }
-  .navbar-s1 .navbar-nav .open .dropdown-menu > li > a:hover,
-  .navbar-s1 .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #ffffff;
-    background-color: transparent;
-  }
-  .navbar-s1 .navbar-nav .open .dropdown-menu > .active > a,
-  .navbar-s1 .navbar-nav .open .dropdown-menu > .active > a:hover,
-  .navbar-s1 .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #ffffff;
-    background-color: #080808;
-  }
-  .navbar-s1 .navbar-nav .open .dropdown-menu > .disabled > a,
-  .navbar-s1 .navbar-nav .open .dropdown-menu > .disabled > a:hover,
-  .navbar-s1 .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #444444;
-    background-color: transparent;
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 }
 
-.navbar-s1 .navbar-link {
-  color: #999999;
-}
-
-.navbar-s1 .navbar-link:hover {
-  color: #ffffff;
-}
 
 </style>
+
  @yield('head')
 </head>
 <body>
-<nav class="navbar navbar-s1 navbar-side" role="navigation">
+@if(Auth::check())
+    @if(Auth::user()->privilege==1)
+<div class="content">
+ <nav class="navbar navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
 
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="">Your Compay Logo</a>
-  </div>
-
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul id="side" class="nav navbar-nav side-nav">
-
-      <li class="side-user">
-        <img class="img-circle " alt="" src="http://s20.postimg.org/5gsu6gp31/yogi.jpg">
-        <p class="welcome"><i class="fa fa-key"></i> Logged in as</p>
-        <p class="name">Yogi Bear <i class="fa fa-sign-out"></i>
-          </a>
-        </p>
-      </li>
-
-      <li><a href=""><i class="fa fa-dashboard"></i> Dashboard</a></li>
-
-      <li class="panel">
-        <a class="accordion-toggle" data-target="#catalog" data-toggle="collapse" data-parent="#side"> Catalog <i class="fa fa-caret-down"></i></a>
-        <ul id="catalog" class="collapse nav">
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Categories</a>
-          </li>
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-          </li>
-          <li class="panel">
-            <a class="accordion-toggle" data-target="#affliate" data-toggle="collapse">Affliate <i class="fa fa-caret-down"></i></a>
-            <ul id="affliate" class="collapse nav">
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Categories</a>
-              </li>
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class="panel">
-        <a class="accordion-toggle" data-target="#extension" data-toggle="collapse" data-parent="#side"> Extension <i class="fa fa-caret-down"></i></a>
-        <ul id="extension" class="collapse nav">
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Extension Installer</a>
-          </li>
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-          </li>
-          <li class="panel">
-            <a class="accordion-toggle" data-target="#modules" data-toggle="collapse">Modules <i class="fa fa-caret-down"></i></a>
-            <ul id="modules" class="collapse nav">
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Categories</a>
-              </li>
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class="panel">
-        <a class="accordion-toggle" data-target="#sale" data-toggle="collapse" data-parent="#side"> Sale <i class="fa fa-caret-down"></i></a>
-        <ul id="sale" class="collapse nav">
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Extension Installer</a>
-          </li>
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-          </li>
-          <li class="panel">
-            <a class="accordion-toggle sub-link" data-target="#customer" data-toggle="collapse">Customer <i class="fa fa-caret-down"></i></a>
-            <ul id="customer" class="collapse nav">
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Categories</a>
-              </li>
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class="panel">
-        <a class="accordion-toggle" data-target="#system" data-toggle="collapse" data-parent="#side"> System <i class="fa fa-caret-down"></i></a>
-        <ul id="system" class="collapse nav">
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Extension Installer</a>
-          </li>
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-          </li>
-          <li class="panel">
-            <a class="accordion-toggle sub-link" data-target="#setting" data-toggle="collapse">Setting <i class="fa fa-caret-down"></i></a>
-            <ul id="setting" class="collapse nav">
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Categories</a>
-              </li>
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li class="panel">
-        <a class="accordion-toggle" data-target="#reports" data-toggle="collapse" data-parent="#side"> Reports <i class="fa fa-caret-down"></i></a>
-        <ul id="reports" class="collapse nav">
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Extension Installer</a>
-          </li>
-          <li>
-            <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-          </li>
-          <li class="panel">
-            <a class="accordion-toggle sub-link" data-target="#report-sale" data-toggle="collapse">Sale <i class="fa fa-caret-down"></i></a>
-            <ul id="report-sale" class="collapse nav">
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Categories</a>
-              </li>
-              <li>
-                <a class="sublink" href=""> <i class="fa fa-angle-double-right"></i> Products</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-    </ul>
-
-    <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown user-dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Your Username<b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li class="dropdown-header">Store <i class="fa fa-shopping-cart"></i></li>
-
-          <li><a href="" target="_blank">Your Demo Store</a></li>
-
-          <li class="divider"></li>
-          <li><a class="sublink" href="">Profile</a></li>
-          <li><a class="sublink" href="">Settings</a></li>
-          <li><a class="sublink" href="">logout</a></li>
-        </ul>
-      </li>
-    </ul>
-
-  </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
-
+</div><!-- end container -->
 <div class="container">
-  <div class="row">
-   
-@yield('body')
+<div class="row">
+  <div class="col-md-3">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="visible-xs navbar-brand">Sidebar menu</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+            <li><a href="#">Menu Item 4</a></li>
+            <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
   </div>
+ 
+  <div class="col-md-9" style="border:1px solid black">
+  <div class="row">
+    @yield('body')
+    </div>
+  </div>
+
 </div>
-<div class="container">
-  <div id="navBar" class="navbar navbar-inverse navbar-fixed-bottom">
+
+</div>
+  <div id="navBar" class="navbar navbar-inverse navbar-bottom">
   <div class="navbar-inner">
      <span class="navbar-text">@All Rights Reserve Brand Name</span>
-   
+</div>
+</div>
+ @elseif(Auth::user()->privilege ==2)
+<div class="content">
+ <nav class="navbar navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div><!-- end container -->
+<div class="container">
+<div class="row">
+  <div class="col-md-3">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="visible-xs navbar-brand">Sidebar menu</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+            <li><a href="#">Menu Item 4</a></li>
+            <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
   </div>
+ 
+  <div class="col-md-9" style="border:1px solid black">
+  <div class="row">
+    @yield('body')
+    </div>
+  </div>
+
+</div>
+
+</div>
+  <div id="navBar" class="navbar navbar-inverse navbar-bottom">
+  <div class="navbar-inner">
+     <span class="navbar-text">@All Rights Reserve Brand Name</span>
 </div>
 </div>
+ @elseif(Auth::user()->privilege ==3)
+ <div class="content">
+ <nav class="navbar navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div><!-- end container -->
+<div class="container">
+<div class="row">
+  <div class="col-md-3">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="visible-xs navbar-brand">Sidebar menu</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+            <li><a href="#">Menu Item 4</a></li>
+            <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+ 
+  <div class="col-md-9" style="border:1px solid black">
+  <div class="row">
+    @yield('body')
+    </div>
+  </div>
+
+</div>
+
+</div>
+  <div id="navBar" class="navbar navbar-inverse navbar-bottom">
+  <div class="navbar-inner">
+     <span class="navbar-text">@All Rights Reserve Brand Name</span>
+</div>
+</div>
+@endif
+@else
+ <div class="content">
+ <nav class="navbar navbar-inverse navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div><!-- end container -->
+<div class="container">
+<div class="row">
+  <div class="col-md-12" style="border:1px solid black">
+  <div class="row">
+    @yield('body')
+    </div>
+  </div>
+
+</div>
+
+</div>
+  <div id="navBar" class="navbar navbar-inverse navbar-bottom">
+  <div class="navbar-inner">
+     <span class="navbar-text">@All Rights Reserve Brand Name</span>
+</div>
+</div>
+@endif
+
+
 </body>
 </html>

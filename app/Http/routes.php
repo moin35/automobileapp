@@ -11,10 +11,16 @@
 |
 */
 
-Route::get('/','UserController@getlogin');
-Route::post('/','UserController@postlogin');
+Route::get('user/login','UserController@getlogin');//Authentication Moin
+Route::post('user/login','UserController@postlogin');//Authentication Moin
+Route::get('dashboard','UserController@index');//Dashboard Main Index Function Moin 
+Route::get('logout','UserController@logout');// LogOut Moin
 
-Route::get('dashboard','UserController@index');
+Route::get('/','UserController@getpublicView');//Public View Moin
+
+
+
+
 Route::get('reg', function () {
     return view('reg');
 });
