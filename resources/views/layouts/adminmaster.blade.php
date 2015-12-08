@@ -222,8 +222,9 @@
         </div>
         <div class="navbar-collapse collapse sidebar-navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Menu Item 1</a></li>
-            <li><a href="#">Menu Item 2</a></li>
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="{{URL::to('add/year/name')}}">Add Year</a></li>
+            <li><a href="{{URL::to('add/brand/name')}}">Add Brand</a></li>
             <li><a href="#">Menu Item 3</a></li>
             <li><a href="#">Menu Item 4</a></li>
             <li><a href="#">Reviews <span class="badge">1,118</span></a></li>
@@ -242,11 +243,13 @@
 </div>
 
 </div>
+
   <div id="navBar" class="navbar navbar-inverse navbar-bottom">
   <div class="navbar-inner">
      <span class="navbar-text">@All Rights Reserve Brand Name</span>
 </div>
 </div>
+
  @elseif(Auth::user()->privilege ==2)
 <div class="content">
  <nav class="navbar navbar-inverse navbar-default" role="navigation">

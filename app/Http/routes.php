@@ -20,3 +20,10 @@ Route::get('/','UserController@getpublicView');//Public View Moin
 
 Route::get('reg','UserController@getregstation');//saif
 Route::post('reg','UserController@postregstation');//saif
+
+Route::get('add/year/name','UserController@getYear');//Admin Brand & Year Name Moin
+Route::post('add/year/name','UserController@postYear');//Admin Brand & Year Name Moin
+
+Route::get('add/brand/name','UserController@getBrandYear');//Admin Brand & Year Name Moin
+Route::post('add/brand/name','UserController@postBrandYear');//Admin Brand & Year Name Moin
+

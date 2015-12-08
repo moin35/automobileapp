@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\DB;
 
 use App\CompanyInfo;
 use App\User;
+use App\YearsList;
+use App\BrandsList;
+
 
 class UserController extends Controller
 {
@@ -143,6 +146,80 @@ class UserController extends Controller
     }
 
     }
+public function getYear(){
+    if (Auth::check()) {
+       if (priv()==1) {
+           return view('superadmin.addyear');
+        }
+        else{
+        Session::flash('data','Login Failed! Please check your credentials.');
+        return redirect::to('user/login');
+        } 
+    }
+    else{
+        Session::flash('data','Login Failed! Please check your credentials.');
+        return redirect::to('user/login');
+    }
+}
+public function postYear(){
+    if (Auth::check()) {
+       if (priv()==1) {
+        $addy=new YearsList;
+        $addy->years=Input::get('year');
+        $addy->save();
+     
+        Session::flash('data','Year Added !');
+       
+        return redirect::to('add/year/name');
+        }
+        else{
+        Session::flash('data','Login Failed! Please check your credentials.');
+        return redirect::to('user/login');
+        } 
+    }
+    else{
+        Session::flash('data','Login Failed! Please check your credentials.');
+        return redirect::to('user/login');
+    }
+}
+public function getBrandYear(){
+    if (Auth::check()) {
+       if (priv()==1) {
+           return view('superadmin.addbrand');
+        }
+        else{
+        Session::flash('data','Login Failed! Please check your credentials.');
+        return redirect::to('user/login');
+        } 
+    }
+    else{
+        Session::flash('data','Login Failed! Please check your credentials.');
+        return redirect::to('user/login');
+    }
+}
+public function postBrandYear(){
+    if (Auth::check()) {
+       if (priv()==1) {
+   
+        $addb=new BrandsList;
+        $addb->car_brandname=Input::get('brand_name');
+        $addb->save();
+        Session::flash('data','Brand name Added !');
+   
+        return redirect::to('add/brand/name');
+        }
+        else{
+        Session::flash('data','Login Failed! Please check your credentials.');
+        return redirect::to('user/login');
+        } 
+    }
+    else{
+        Session::flash('data','Login Failed! Please check your credentials.');
+        return redirect::to('user/login');
+    }
+}
+
+
 
 }
 
