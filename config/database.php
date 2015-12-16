@@ -77,10 +77,10 @@ return [
 
         'sqlsrv' => [
             'driver'   => 'sqlsrv',
-            'host'     => '103.10.54.99',
-            'database' => 'automobile_app',
-            'username' => 'sa',
-            'password' => 'Qwert3201',
+            'host'     => '',
+            'database' => '',
+            'username' => '',
+            'password' => '',
             'charset'  => 'utf8',
             'prefix'   => '',
         ],
